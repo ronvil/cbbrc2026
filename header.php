@@ -17,12 +17,22 @@
   </div>
 
   <div id="sidr">
-    <!-- mobile menu here -->
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus nulla labore facilis, eligendi optio modi dicta. Architecto in culpa fugit dolores quod, non nesciunt saepe eveniet, impedit omnis assumenda dolorem.</p>    
   </div>
 
   <header class="banner" role="banner">
 
-    <div class="container">
-    </div> 
+    <div class="container banner__container">
+      <div class="logo">
+        <h1 class="screen-reader-text">Crispin B. Beltran Resource Center</h1>
+        <a href="#" class="logo__anchor">
+          <picture>
+            <source media="(min-width:650px)" srcset="<?php bloginfo( 'stylesheet_directory' ); ?>/images/cbbrc-logo-full.png">
+            <img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/cbbrc-logo-icon.png" alt="CBBRC Logo" style="width:auto;">
+        </picture>
+        </a>
+      </div>
+      <a id="menu-toggle" href="#sidr" class="menu-toggle"><i class="fas fa-bars"></i></a>
+    </div>
 
   </header>
