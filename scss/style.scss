@@ -40,4 +40,10 @@ nav {
 	img {
 		max-width: 100%;
 	}
+	@include variables.for-tablet-portrait-up {
+		width: 200px;
+	}
+	@include variables.for-desktop-up {
+		width: 250px;
+	}
 }
