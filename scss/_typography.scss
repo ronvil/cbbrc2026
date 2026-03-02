@@ -140,7 +140,7 @@
 }
 
 body {
-	color: #333;
+	color: variables.$dark;
   font-size: var(--p-size); 
   line-height: 1.5;
   @include inter-normal;

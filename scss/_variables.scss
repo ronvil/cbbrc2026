@@ -1,5 +1,40 @@
+$orange: #d9641e;
+$accent: #ed7d27;
+$beige: #ece2d2;
+$light: #f7f7f7;
+$gray: #41423a;
+$dark: #141414;
+
 @mixin transition {
   transition: all .3s;
+}
+
+@mixin borderradius {
+  border-radius: 1rem;
+}
+
+@mixin sectioncard {
+  border-radius: 0 0 2rem 2rem;
+  overflow: hidden;
+  margin-bottom: -2rem;
+}
+
+@mixin screen {
+  position: relative;
+  &::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    content: "";
+    width: 100%;
+    background: rgba($color: $dark, $alpha: .8);
+    z-index: 1;
+  }
+}
+
+@mixin grid {
+  display: grid;
+  padding: 1rem;
 }
 
 @mixin for-phone-only {
@@ -16,4 +51,18 @@
 }
 @mixin for-big-desktop-up {
   @media (min-width: 1690px) { @content; }
+}
+
+.button {
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: .5rem 1rem;
+  text-decoration: none;
+  display: inline-block;
+  &-urgent {
+    background: $orange;
+    color: $light;
+  }
 }
