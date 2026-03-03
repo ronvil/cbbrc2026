@@ -189,3 +189,13 @@ h1 {
   width: 1px;
   word-wrap: normal !important;
 }
+
+.meta {
+  text-transform: uppercase;
+  @include sub-size;
+  color: variables.$gray;
+}
+
+a {
+  color: variables.$blue;
+}

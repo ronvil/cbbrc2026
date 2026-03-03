@@ -53,7 +53,7 @@ nav {
 			}
 		}
 		&__container {
-			background: rgba($color: variables.$light, $alpha: .9);
+			background: rgba($color: variables.$light, $alpha: .95	);
 			@include variables.borderradius;
 		}
 	}
@@ -124,7 +124,9 @@ main {
 	&__container {
 		@include variables.grid;
 		gap: 1rem;
-		grid-template-columns: repeat(2, 1fr);
+		@include variables.for-tablet-landscape-up {
+			grid-template-columns: repeat(2, 1fr);
+		}
 		img {
 			max-width: 100%;
 			@include variables.borderradius;
@@ -179,8 +181,18 @@ main {
 	&__thumb {
 		@include variables.borderradius;
 		overflow: hidden;
+		margin: -1rem -1rem 1rem;
+	}
+	&__catcontainer {
+		a {
+			@include typography.sub-size;
+		}
 	}
 	img {
 		max-width: 100%;
+	}
+	h3 {
+		@include typography.h6-size;
+		margin-bottom: 0;
 	}
 }
