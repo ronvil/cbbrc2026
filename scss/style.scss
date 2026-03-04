@@ -73,6 +73,49 @@ nav {
 	}
 }
 
+.mainnav {
+	display: flex;
+	gap: 1rem;
+	a {
+		color: variables.$orange;
+		text-decoration: none;
+	}
+}
+
+.bannermenu {
+	display: none;
+	text-transform: uppercase;
+	@include variables.for-tablet-landscape-up {
+		display: block;
+	}
+	ul {
+		display: flex;
+		gap: 1rem;
+		font-weight: bold;
+		margin: 0;
+		outline: 1px solid;
+		ul {
+			display: none;
+			flex-direction: column;
+			position: absolute;
+			background: variables.$light;
+			@include typography.sub-size;
+			width: max-content;
+			top: 1.75rem;
+			
+			li {
+				padding: .25rem .5rem;
+			}
+		}
+		li:hover {
+			position: relative;
+			ul {
+				display: flex;
+			}
+		}
+	}
+}
+
 .home {
 	section {
 		padding: 6rem 0 4rem;
@@ -114,6 +157,9 @@ main {
 		position: relative;
 		z-index: 2;
 		color: #fff;
+	}
+	&__content {
+		max-width: 900px;
 	}
 }
 
@@ -186,6 +232,7 @@ main {
 	&__catcontainer {
 		a {
 			@include typography.sub-size;
+			text-decoration: none;
 		}
 	}
 	img {
@@ -194,5 +241,8 @@ main {
 	h3 {
 		@include typography.h6-size;
 		margin-bottom: 0;
+		a {
+			text-decoration: none;
+		}
 	}
 }

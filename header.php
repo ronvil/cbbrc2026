@@ -32,7 +32,14 @@
         </picture>
         </a>
       </div>
-      <a id="menu-toggle" href="#sidr" class="menu-toggle"><i class="fas fa-bars"></i></a>
+
+      <nav class="mainnav">
+        <div class="mainnav__menu bannermenu">
+          <?php get_template_part( 'inc/component', 'menu' ); ?>
+        </div>
+        <a id="search-toggle" href="#" class="search-toggle"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a id="menu-toggle" href="#sidr" class="menu-toggle"><i class="fas fa-bars"></i></a>
+      </nav>
     </div>
 
   </header>
